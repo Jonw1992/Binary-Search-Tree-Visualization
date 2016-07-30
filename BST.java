@@ -6,7 +6,6 @@ public class BST
 {
 	private TreeNode root;
 
-
 	public BST(int value)
 	{
 		root = new TreeNode(null,null,null,value);
@@ -20,7 +19,6 @@ public class BST
 	{
 		root.insert(value);
 	}
-
 	public void insert(int value, Graphics g, int x, int y)
 	{
 		root.insert(value , g,x,y);
@@ -34,8 +32,6 @@ public class BST
 			System.out.println(node.getvalue());
 			node = node.getNextBiggestNode(node);
 		}
-
-		//root.printNode();
 	}
 
 

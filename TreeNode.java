@@ -8,9 +8,12 @@ public class TreeNode
 	private TreeNode parent;
 	private TreeNode right;
 	private TreeNode left;
-
 	private int value;
 
+	public TreeNode getLeft(){return this.left;}
+	public TreeNode getRight(){return this.right;}
+	public TreeNode getParent(){return this.parent;}
+	public int getvalue(){return this.value;}
 
 	public TreeNode(TreeNode parent,TreeNode right,TreeNode left, int value)
 	{
@@ -30,27 +33,6 @@ public class TreeNode
 		g.drawRect(550,25,50,25);
 		g.setColor(Color.blue);
 		g.drawString(Integer.toString(value),560, 40);
-	}
-
-
-	public void setleft(TreeNode left)
-	{
-		this.left = left;
-	}
-
-	public void setright(TreeNode right)
-	{
-		this.right = right;
-	}
-
-	public void setparent(TreeNode parent)
-	{
-		this.parent = parent;
-	}
-
-	public void setvalue(int value)
-	{
-		this.value = value;
 	}
 
 	public void insert(int num)
@@ -78,9 +60,6 @@ public class TreeNode
 			}
 		}
 		else{}
-
-
-
 	}
 
 	public void insert(int num, Graphics g, int x, int y)
@@ -119,24 +98,6 @@ public class TreeNode
 			}
 		}
 		else{}
-
-
-	}
-	public TreeNode getLeft()
-	{
-		return this.left;
-	}
-	public TreeNode getRight()
-	{
-		return this.right;
-	}
-	public TreeNode getParent()
-	{
-		return this.parent;
-	}
-	public int getvalue()
-	{
-		return this.value;
 	}
 
 	public TreeNode getSmallestNodeInBranch()
@@ -179,21 +140,6 @@ public class TreeNode
 		return null;
 	}
 
-
-	public void printNode()
-	{
-		System.out.println(this.value);
-		if(this.left != null)
-		{
-			System.out.print("/");
-			this.left.printNode();
-		}
-		if(this.right != null)
-		{
-			System.out.print("\\");
-			this.right.printNode();
-		}
-	}
 
 
 }
